@@ -1,0 +1,45 @@
+Create table empmang 
+( 
+	eid int primary key,
+	ename varchar(40),
+	dept varchar(40),
+	dob varchar(40),
+	gender varchar(40), 
+	address varchar(40), 
+	phoneno varchar(40), 
+	emailid varchar(40), 
+	position varchar(40),
+	experience varchar(40),
+	qualification varchar(40)
+); 
+
+Create table attend 
+(	
+	id int auto_increment primary key,
+	eid int,
+	ename varchar(40),
+	dept varchar(40),
+	attendance varchar(40),
+	date date,
+	time time,
+	foreign key (eid) references empmang(eid)
+);
+
+Create table leavemang
+( 
+	id int auto_increment primary key,
+	eid int,
+	ename varchar(40),
+	dept varchar(40),
+	fromdate varchar(40),
+	todate varchar(40),
+	noofdays varchar(40), 
+	reason varchar(40),
+	foreign key (eid) references empmang(eid)
+);
+
+Create table Login 
+( 
+username varchar(20),
+password varchar(20),
+);
