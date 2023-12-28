@@ -205,6 +205,7 @@ public class View3
                             String fromdate = rs.getString("fromdate");
                             String todate = rs.getString("todate");
                             String noofdays = rs.getString("noofdays");
+                            String reason = rs.getString("reason");
                             f.dispose();
                             Leave li = new Leave();
                             li.t1.setText(eid);
@@ -215,6 +216,7 @@ public class View3
                             li.t3.setText(fromdate);
                             li.t4.setText(todate);
                             li.t5.setText(noofdays);
+                            li.t6.setText(reason);
                             li.b2.setEnabled(false);
                             li.b4.setEnabled(true);
                         }

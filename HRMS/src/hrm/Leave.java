@@ -12,12 +12,12 @@ public class Leave extends JFrame
 {
     JFrame f;
     JPanel p1; 
-    JLabel l1,l2,l3,l4,l5,l6,l7,imageLabel;
+    JLabel l1,l2,l3,l4,l5,l6,l7,l8,imageLabel;
     JButton b1,b2,b3,b4,b5;
     JComboBox cb1; 
     String a,b;
     String[] options = {"Sales","Accounts","Marketing","IT"};
-    JTextField t1,t2,t3,t4,t5;
+    JTextField t1,t2,t3,t4,t5,t6;
      public static Leave instance = null;
     Leave()
     { 
@@ -60,14 +60,16 @@ public class Leave extends JFrame
         });
         
         l2 = new JLabel("Department"); 
-        l2.setBounds(230,0,150,100); 
+        l2.setBounds(40,0,150,100); 
+        //230 0 150 100
         l2.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l2.setForeground(Color.BLACK); 
         imageLabel.add(l2);
         
         cb1 = new JComboBox(options);
         cb1.setSelectedIndex(-1);
-        cb1.setBounds(370,40,150,30); 
+        cb1.setBounds(180,40,150,30); 
+        //370 40 150 30
         cb1.setFont(new Font("Segoe UI", Font.PLAIN,16));
         imageLabel.add(cb1);
         cb1.addItemListener(new ItemListener()
@@ -99,13 +101,15 @@ public class Leave extends JFrame
         });
         
         l3 = new JLabel("Employee ID"); 
-        l3.setBounds(230,80,150,100); 
+        l3.setBounds(40,80,150,100); 
+        //230 80 150 100
         l3.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l3.setForeground(Color.BLACK);;
         imageLabel.add(l3);
         
         t1 = new JTextField(3); 
-        t1.setBounds(370,120,150,30); 
+        t1.setBounds(180,120,150,30);
+        //370 120 150 30
         t1.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t1);
         t1.addKeyListener(new KeyAdapter()
@@ -206,13 +210,15 @@ public class Leave extends JFrame
         });
         
         l4 = new JLabel("Name"); 
-        l4.setBounds(230,150,150,100); 
+        l4.setBounds(40,150,150,100); 
+        //230 150 150 100
         l4.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l4.setForeground(Color.BLACK);;
         imageLabel.add(l4);
         
         t2 = new JTextField(); 
-        t2.setBounds(370,190,150,30); 
+        t2.setBounds(180,190,150,30); 
+        //370 190 150 30
         t2.setFont(new Font("Segeo UI",Font.PLAIN,16)); 
         imageLabel.add(t2);
         t2.setEnabled(false);
@@ -230,7 +236,7 @@ public class Leave extends JFrame
                 { 
                    try
                    { 
-                        String eid,ename,dept,fromdate,todate,noofdays;
+                        String eid,ename,dept,fromdate,todate,noofdays,reason;
                         ConnectionClass obj = new ConnectionClass();
                         eid =t1.getText(); 
                         ename = t2.getText(); 
@@ -238,7 +244,8 @@ public class Leave extends JFrame
                         fromdate = t3.getText(); 
                         todate = t4.getText(); 
                         noofdays = t5.getText();
-                        String query ="Insert into leavemang (eid, ename, dept,fromdate,todate,noofdays) values (?, ?, ?,?,?,?)";
+                        reason = t6.getText();
+                        String query ="Insert into leavemang (eid, ename, dept,fromdate,todate,noofdays,reason) values (?, ?, ?,?,?,?,?)";
                         PreparedStatement stmt = obj.con.prepareStatement(query);
                         stmt.setString(1, eid);
                         stmt.setString(2, ename);
@@ -246,6 +253,7 @@ public class Leave extends JFrame
                         stmt.setString(4,fromdate);
                         stmt.setString(5,todate); 
                         stmt.setString(6,noofdays);
+                        stmt.setString(7,reason);
                         int rowsInserted = stmt.executeUpdate();
                         if (rowsInserted > 0)
                         { 
@@ -288,20 +296,22 @@ public class Leave extends JFrame
             { 
                 if (isvalid())
                 { 
-                    String eid,fromdate,todate,noofdays;
+                    String eid,fromdate,todate,noofdays,reason;
                     ConnectionClass obj = new ConnectionClass();
                     PreparedStatement pstmt = null;
                     try 
                     {
-                        pstmt = obj.con.prepareStatement("Update leavemang set fromdate = ?, todate = ?, noofdays = ? where eid = ?");
+                        pstmt = obj.con.prepareStatement("Update leavemang set fromdate = ?, todate = ?, noofdays = ?, reason =? where eid = ?");
                         eid = t1.getText();
                         fromdate = t3.getText();
                         todate = t4.getText();
                         noofdays = t5.getText();
+                        reason = t6.getText();
                         pstmt.setString(1,fromdate);
                         pstmt.setString(2,todate);
                         pstmt.setString(3,noofdays);
-                        pstmt.setString(4,eid);
+                        pstmt.setString(4,reason);
+                        pstmt.setString(5,eid);
                         int rowsAffected = pstmt.executeUpdate();
                         if (rowsAffected > 0) 
                         {
@@ -351,13 +361,15 @@ public class Leave extends JFrame
         });
         
         l5 = new JLabel("From Date"); 
-        l5.setBounds(230,230,150,100); 
+        l5.setBounds(430,0,150,100); 
+        //*230 230 150 100
         l5.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l5.setForeground(Color.BLACK);;
         imageLabel.add(l5);
         
         t3 = new JTextField("dd/mm/yyyy"); 
-        t3.setBounds(370,270,150,30); 
+        t3.setBounds(530,40,150,30); 
+        //370 270 150 30
         t3.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t3);
         t3.addFocusListener(new FocusAdapter()
@@ -444,13 +456,15 @@ public class Leave extends JFrame
         });
         
         l6 = new JLabel("To Date"); 
-        l6.setBounds(230,310,150,100); 
+        l6.setBounds(430,80,150,100);
+        //230 310 150 100 
         l6.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l6.setForeground(Color.BLACK);;
         imageLabel.add(l6);
         
         t4 = new JTextField("dd/mm/yyyy"); 
-        t4.setBounds(370,350,150,30); 
+        t4.setBounds(530,120,150,30);
+        //370 350 150 30 
         t4.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t4);
         t4.addFocusListener(new FocusAdapter()
@@ -563,16 +577,40 @@ public class Leave extends JFrame
         });
         
         l7 = new JLabel("No. of Days"); 
-        l7.setBounds(230,390,150,100); 
+        l7.setBounds(430,150,150,100);
+        //230 390 150 100
         l7.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l7.setForeground(Color.BLACK);;
         imageLabel.add(l7);
         
         t5 = new JTextField(); 
-        t5.setBounds(370,430,150,30); 
+        t5.setBounds(530,190,150,30);
+        //370 430 150 30
         t5.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t5);
         t5.setEnabled(false);
+
+        l8 = new JLabel("Reason"); 
+        l8.setBounds(230,230,150,100);
+        //230 390 150 100
+        l8.setFont(new Font("Segoe UI",Font.BOLD,16)); 
+        l8.setForeground(Color.BLACK);;
+        imageLabel.add(l8);
+        
+        t6 = new JTextField(); 
+        t6.setBounds(370,270,150,30);
+        //370 430 150 30
+        t6.setFont(new Font("Segeo UI",Font.PLAIN,16));
+        imageLabel.add(t6);
+        t6.addKeyListener(new KeyAdapter()
+        { 
+            public void keyTyped(KeyEvent e)
+            { 
+                char c = e.getKeyChar();
+                if (!Character.isLetter(c)&& !Character.isWhitespace(c)) 
+                    e.consume();
+            }
+        });
         
         f.getContentPane(); 
         f.setVisible(true); 
@@ -610,6 +648,11 @@ public class Leave extends JFrame
             JOptionPane.showMessageDialog(imageLabel,"Enter the To Date","Error",JOptionPane.ERROR_MESSAGE); 
             return false;
         }
+        else if (t6.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(imageLabel,"Enter the Reason","Error",JOptionPane.ERROR_MESSAGE); 
+            return false;
+        }
         else 
             return true;
     }
@@ -621,6 +664,7 @@ public class Leave extends JFrame
         t3.setText(null);
         t4.setText(null);
         t5.setText(null);
+        t6.setText(null);
         t1.setEnabled(true);
         cb1.setEnabled(true);
         b2.setEnabled(true);

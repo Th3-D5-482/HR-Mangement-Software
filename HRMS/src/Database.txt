@@ -25,7 +25,7 @@ Create table attend
 	foreign key (eid) references empmang(eid)
 );
 
-Create table leave 
+Create table leavemang
 ( 
 	id int auto_increment primary key,
 	eid int,
@@ -34,6 +34,7 @@ Create table leave
 	fromdate varchar(40),
 	todate varchar(40),
 	noofdays varchar(40), 
+	reason varchar(40),
 	foreign key (eid) references empmang(eid)
 );
 

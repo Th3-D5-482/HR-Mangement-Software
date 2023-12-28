@@ -376,7 +376,7 @@ public class EmployeeMangement extends JFrame
         l10 = new JLabel("Position"); 
         l10.setBounds(430,150,150,100); 
         l10.setFont(new Font("Segoe UI",Font.BOLD,16)); 
-        l10.setForeground(Color.BLACK);;
+        l10.setForeground(Color.BLACK);
         imageLabel.add(l10);
         
         t7 = new JTextField(); 
