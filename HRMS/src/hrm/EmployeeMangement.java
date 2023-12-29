@@ -37,7 +37,7 @@ public class EmployeeMangement extends JFrame
         l1.setForeground(Color.RED);
         p1.add(l1);
         
-        ImageIcon image = new ImageIcon (getClass ().getResource ("/hrm/Pictures/emp.jpg"));
+        ImageIcon image = new ImageIcon (getClass ().getResource ("/hrm/Pictures/emp.png"));
         Image scaledImage = image.getImage ().getScaledInstance (700, 700,Image.SCALE_DEFAULT);
         image = new ImageIcon (scaledImage);
         JLabel imageLabel = new JLabel (image);
