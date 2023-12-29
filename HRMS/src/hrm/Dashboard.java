@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Dashboard extends JFrame 
 {
     JFrame f;
-    JButton b1,b2,b3; 
+    JButton b1,b2,b3,b4; 
     JLabel l1;
     JPanel p1,p2,p3;
     Dashboard()
@@ -46,6 +46,19 @@ public class Dashboard extends JFrame
             public void actionPerformed(ActionEvent e)
             { 
                 Leave.getInstance();
+            }
+        });
+
+        b4 = new JButton("Logout"); 
+        b4.setBounds(10,420,180,50);
+        b4.setFont(new Font("Arail",Font.BOLD,12));
+        f.add(b4);
+        b4.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            { 
+                f.dispose();
+                new LoginPage();
             }
         });
         
