@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 public class Leave extends JFrame
 {
-    JFrame f;
+    static JFrame f;
     JPanel p1; 
     JLabel l1,l2,l3,l4,l5,l6,l7,l8,imageLabel;
     JButton b1,b2,b3,b4,b5;

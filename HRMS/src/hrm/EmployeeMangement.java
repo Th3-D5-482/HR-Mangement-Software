@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 public class EmployeeMangement extends JFrame 
 { 
-    JFrame f;
+    static JFrame f;
     JPanel p1; 
     JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,imageLabel;
     JComboBox cb1;

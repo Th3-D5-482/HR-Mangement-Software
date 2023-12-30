@@ -9,7 +9,7 @@ import java.sql.Date;
 import java.sql.Timestamp;
 public class Attendance extends JFrame
 {
-    JFrame f;
+    static JFrame f;
     JPanel p1; 
     JLabel l1,l2,l3,l4,l5,imageLabel;
     JButton b1,b2,b3,b4,b5;
@@ -20,6 +20,7 @@ public class Attendance extends JFrame
     JRadioButton r1,r2;
     ButtonGroup bg;
     public static Attendance instance = null;
+    protected static Object dispose;
     Attendance() 
     { 
         f = new JFrame("Attendance");
