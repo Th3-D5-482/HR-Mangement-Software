@@ -22,7 +22,7 @@ Create table attend
 	attendance varchar(40),
 	date date,
 	time time,
-	foreign key (eid) references empmang(eid)
+	//foreign key (eid) references empmang(eid)
 );
 
 Create table leavemang
@@ -35,7 +35,7 @@ Create table leavemang
 	todate varchar(40),
 	noofdays varchar(40), 
 	reason varchar(40),
-	foreign key (eid) references empmang(eid)
+	//foreign key (eid) references empmang(eid)
 );
 
 Create table Login 

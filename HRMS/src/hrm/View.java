@@ -294,7 +294,7 @@ public class View
                             pst = obj.con.prepareStatement("Delete from attend where eid = ?");
                             ps = obj.con.prepareStatement("Delete from leavemang where eid = ?");
                             ps.setString(1,b);
-                            pstmt.setString(1, b);
+                            pstmt.setString(1, a);
                             pst.setString(1,b);
                             int rowsAffected = pstmt.executeUpdate();
                             pst.executeUpdate();
