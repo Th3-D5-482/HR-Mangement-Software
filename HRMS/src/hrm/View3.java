@@ -31,7 +31,7 @@ public class View3
         f.add(p1);
         
         l1 = new JLabel("Leave View");
-        l1.setBounds(320,0,500,50); 
+        l1.setBounds(310,0,500,50); 
         l1.setFont(new Font("Segoe UI",Font.BOLD,24));
         l1.setForeground(Color.RED);
         p1.add(l1);
