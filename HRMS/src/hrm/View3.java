@@ -161,7 +161,7 @@ public class View3
                     }
                     else 
                     { 
-                        JOptionPane.showMessageDialog(imageLabel,"Enter the ID","Error",JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(imageLabel,"ID Not Found","Error",JOptionPane.ERROR_MESSAGE);
                         t1.setText(null);
                     }
                 }
