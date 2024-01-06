@@ -75,6 +75,8 @@ public class LoginPage extends JFrame
                        JOptionPane.showMessageDialog(f,"Invalid Login","Error",JOptionPane.ERROR_MESSAGE);
                        f.setVisible(false);
                        f.setVisible(true);
+                       t1.setText(null);
+                       t2.setText(null);
                    }
                }
                catch (Exception k)
