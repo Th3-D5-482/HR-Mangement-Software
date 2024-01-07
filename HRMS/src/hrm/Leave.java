@@ -60,14 +60,14 @@ public class Leave extends JFrame
         });
         
         l2 = new JLabel("Department"); 
-        l2.setBounds(40,0,150,100);//230 0 150 100
+        l2.setBounds(40,0,150,100);
         l2.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l2.setForeground(Color.BLACK); 
         imageLabel.add(l2);
         
         cb1 = new JComboBox(options);
         cb1.setSelectedIndex(-1);
-        cb1.setBounds(180,40,150,30);//370 40 150 30
+        cb1.setBounds(180,40,150,30);
         cb1.setFont(new Font("Segoe UI", Font.PLAIN,16));
         imageLabel.add(cb1);
         cb1.addItemListener(new ItemListener()
@@ -99,13 +99,13 @@ public class Leave extends JFrame
         });
         
         l3 = new JLabel("Employee ID"); 
-        l3.setBounds(40,80,150,100);//230 80 150 100
+        l3.setBounds(40,80,150,100);
         l3.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l3.setForeground(Color.BLACK);;
         imageLabel.add(l3);
         
         t1 = new JTextField(3); 
-        t1.setBounds(180,120,150,30);//370 120 150 30
+        t1.setBounds(180,120,150,30);
         t1.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t1);
         t1.addKeyListener(new KeyAdapter()
@@ -206,13 +206,13 @@ public class Leave extends JFrame
         });
         
         l4 = new JLabel("Name"); 
-        l4.setBounds(40,150,150,100);//230 150 150 100
+        l4.setBounds(40,150,150,100);
         l4.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l4.setForeground(Color.BLACK);;
         imageLabel.add(l4);
         
         t2 = new JTextField(); 
-        t2.setBounds(180,190,150,30);//370 190 150 30
+        t2.setBounds(180,190,150,30);
         t2.setFont(new Font("Segeo UI",Font.PLAIN,16)); 
         imageLabel.add(t2);
         t2.setEnabled(false);
@@ -355,13 +355,13 @@ public class Leave extends JFrame
         });
         
         l5 = new JLabel("From Date"); 
-        l5.setBounds(430,0,150,100);//230 230 150 100
+        l5.setBounds(430,0,150,100);
         l5.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l5.setForeground(Color.BLACK);;
         imageLabel.add(l5);
         
         t3 = new JTextField("dd/mm/yyyy"); 
-        t3.setBounds(530,40,150,30);//370 270 150 30
+        t3.setBounds(530,40,150,30);
         t3.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t3);
         t3.addFocusListener(new FocusAdapter()
@@ -448,13 +448,13 @@ public class Leave extends JFrame
         });
         
         l6 = new JLabel("To Date"); 
-        l6.setBounds(430,80,150,100);//230 310 150 100 
+        l6.setBounds(430,80,150,100); 
         l6.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l6.setForeground(Color.BLACK);;
         imageLabel.add(l6);
         
         t4 = new JTextField("dd/mm/yyyy"); 
-        t4.setBounds(530,120,150,30);//370 350 150 30 
+        t4.setBounds(530,120,150,30);
         t4.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t4);
         t4.addFocusListener(new FocusAdapter()
@@ -567,25 +567,25 @@ public class Leave extends JFrame
         });
         
         l7 = new JLabel("No. of Days"); 
-        l7.setBounds(430,150,150,100);//230 390 150 100
+        l7.setBounds(430,150,150,100);
         l7.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l7.setForeground(Color.BLACK);;
         imageLabel.add(l7);
         
         t5 = new JTextField(); 
-        t5.setBounds(530,190,150,30);//370 430 150 30
+        t5.setBounds(530,190,150,30);
         t5.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t5);
         t5.setEnabled(false);
 
         l8 = new JLabel("Reason"); 
-        l8.setBounds(230,230,150,100);//230 390 150 100
+        l8.setBounds(230,230,150,100);
         l8.setFont(new Font("Segoe UI",Font.BOLD,16)); 
         l8.setForeground(Color.BLACK);;
         imageLabel.add(l8);
         
         t6 = new JTextField(); 
-        t6.setBounds(370,270,150,30);//370 430 150 30
+        t6.setBounds(370,270,150,30);
         t6.setFont(new Font("Segeo UI",Font.PLAIN,16));
         imageLabel.add(t6);
         t6.addKeyListener(new KeyAdapter()
