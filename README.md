@@ -1,6 +1,6 @@
 # 🧑‍💼 Human Resource Management System (HRMS)
 
-### 👤 Created by: Darren Immanuel Fernandes
+### 👤 Created by: Th3_D5_482
 
 ---
 
