@@ -1,4 +1,4 @@
-# 🧑‍💼 HR Management System (HRMS)
+# 🤵🏻 HR Management System (HRMS)
 
 ### 👤 Created by: [Th3-D5-482](https://www.github.com/Th3-D5-482)
 
